@@ -1,0 +1,881 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>800</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>800</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>منظومة مبيعات</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>mainIcon.png</normaloff>mainIcon.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(255, 255, 255);</string>
+  </property>
+  <property name="toolButtonStyle">
+   <enum>Qt::ToolButtonIconOnly</enum>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>6</x>
+      <y>9</y>
+      <width>791</width>
+      <height>581</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(151, 0, 111);
+background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="tabPosition">
+     <enum>QTabWidget::North</enum>
+    </property>
+    <property name="tabShape">
+     <enum>QTabWidget::Triangular</enum>
+    </property>
+    <property name="currentIndex">
+     <number>1</number>
+    </property>
+    <widget class="QWidget" name="tab">
+     <attribute name="title">
+      <string>اضافة منتج</string>
+     </attribute>
+     <widget class="QWidget" name="gridLayoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>130</y>
+        <width>521</width>
+        <height>251</height>
+       </rect>
+      </property>
+      <layout class="QGridLayout" name="gridLayout">
+       <item row="0" column="1">
+        <widget class="QLineEdit" name="name">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(151, 0, 111);
+border-color: rgb(151, 0, 111);
+padding : 2px;</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="2">
+        <widget class="QLabel" name="nameL">
+         <property name="styleSheet">
+          <string notr="true">color: rgb(151, 0, 111);
+background-color: rgb(255, 255, 255);</string>
+         </property>
+         <property name="text">
+          <string>اسم المنتج :</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QLineEdit" name="number">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(151, 0, 111);
+border-color: rgb(151, 0, 111);
+padding : 2px;</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="1">
+        <widget class="QLineEdit" name="price">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(151, 0, 111);
+border-color: rgb(151, 0, 111);
+padding : 2px;</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="2">
+        <widget class="QLabel" name="quantityL">
+         <property name="styleSheet">
+          <string notr="true">color: rgb(151, 0, 111);
+background-color: rgb(255, 255, 255);</string>
+         </property>
+         <property name="text">
+          <string>كمية المنتج :</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="2">
+        <widget class="QLabel" name="priceL">
+         <property name="styleSheet">
+          <string notr="true">color: rgb(151, 0, 111);
+background-color: rgb(255, 255, 255);</string>
+         </property>
+         <property name="text">
+          <string>سعر المنتج :</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QLineEdit" name="quantity">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(151, 0, 111);
+border-color: rgb(151, 0, 111);
+padding : 2px;</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="2">
+        <widget class="QLabel" name="numberL">
+         <property name="styleSheet">
+          <string notr="true">color: rgb(151, 0, 111);
+background-color: rgb(255, 255, 255);</string>
+         </property>
+         <property name="text">
+          <string>رقم المنتج :</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QPushButton" name="clear">
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>390</y>
+        <width>121</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(151, 0, 111);
+color: rgb(255, 255, 255);
+font: 10pt &quot;Bernard MT Condensed&quot;;
+</string>
+      </property>
+      <property name="text">
+       <string>إلغاء</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="boxAdd">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>90</y>
+        <width>600</width>
+        <height>361</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(151, 0, 111);</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Box</enum>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="addL">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>80</y>
+        <width>61</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(151, 0, 111);
+background-color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>اضافة منتج</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="add">
+      <property name="geometry">
+       <rect>
+        <x>392</x>
+        <y>390</y>
+        <width>121</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(151, 0, 111);
+color: rgb(255, 255, 255);
+font: 10pt &quot;Bernard MT Condensed&quot;;
+</string>
+      </property>
+      <property name="text">
+       <string>إضافة</string>
+      </property>
+     </widget>
+     <zorder>boxAdd</zorder>
+     <zorder>gridLayoutWidget</zorder>
+     <zorder>clear</zorder>
+     <zorder>addL</zorder>
+     <zorder>add</zorder>
+    </widget>
+    <widget class="QWidget" name="tab_2">
+     <attribute name="title">
+      <string>تعديل / حذف منتج</string>
+     </attribute>
+     <widget class="QLabel" name="boxEdit">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>80</y>
+        <width>600</width>
+        <height>400</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(151, 0, 111);</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Box</enum>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="editL">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>70</y>
+        <width>61</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(151, 0, 111);
+background-color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>تعديل منتج</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QWidget" name="">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>120</y>
+        <width>521</width>
+        <height>321</height>
+       </rect>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_2">
+       <item row="0" column="0">
+        <widget class="QPushButton" name="search">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(151, 0, 111);
+color: rgb(255, 255, 255);
+font: 10pt &quot;Bernard MT Condensed&quot;;
+</string>
+         </property>
+         <property name="text">
+          <string>بحث</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="4">
+        <widget class="QLabel" name="enterID">
+         <property name="styleSheet">
+          <string notr="true">color: rgb(151, 0, 111);
+background-color: rgb(255, 255, 255);</string>
+         </property>
+         <property name="text">
+          <string>ادخل رقم المنتج :</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="4">
+        <widget class="QLabel" name="nameLedit">
+         <property name="styleSheet">
+          <string notr="true">color: rgb(151, 0, 111);
+background-color: rgb(255, 255, 255);</string>
+         </property>
+         <property name="text">
+          <string>اسم المنتج :</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="4">
+        <widget class="QLabel" name="quantityLedit">
+         <property name="styleSheet">
+          <string notr="true">color: rgb(151, 0, 111);
+background-color: rgb(255, 255, 255);</string>
+         </property>
+         <property name="text">
+          <string>كمية المنتج :</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="4">
+        <widget class="QLabel" name="priceLedit">
+         <property name="styleSheet">
+          <string notr="true">color: rgb(151, 0, 111);
+background-color: rgb(255, 255, 255);</string>
+         </property>
+         <property name="text">
+          <string>سعر المنتج :</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="2">
+        <widget class="QPushButton" name="deleteItem">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(151, 0, 111);
+color: rgb(255, 255, 255);
+font: 10pt &quot;Bernard MT Condensed&quot;;
+</string>
+         </property>
+         <property name="text">
+          <string>حذف</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="3">
+        <widget class="QPushButton" name="edit">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(151, 0, 111);
+color: rgb(255, 255, 255);
+font: 10pt &quot;Bernard MT Condensed&quot;;
+</string>
+         </property>
+         <property name="text">
+          <string>تعديل</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1" colspan="3">
+        <widget class="QLineEdit" name="idItem">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(151, 0, 111);
+border-color: rgb(151, 0, 111);
+padding : 2px;</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0" colspan="4">
+        <widget class="QLineEdit" name="nameEdit">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(151, 0, 111);
+border-color: rgb(151, 0, 111);
+padding : 2px;</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0" colspan="4">
+        <widget class="QLineEdit" name="quantityEdit">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(151, 0, 111);
+border-color: rgb(151, 0, 111);
+padding : 2px;</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0" colspan="4">
+        <widget class="QLineEdit" name="priceEdit">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(151, 0, 111);
+border-color: rgb(151, 0, 111);
+padding : 2px;</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="0" colspan="2">
+        <widget class="QPushButton" name="clearEdit">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(151, 0, 111);
+color: rgb(255, 255, 255);
+font: 10pt &quot;Bernard MT Condensed&quot;;
+</string>
+         </property>
+         <property name="text">
+          <string>إلغاء</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+      <zorder>idItem</zorder>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="widget">
+     <attribute name="title">
+      <string>عرض</string>
+     </attribute>
+     <widget class="QTableWidget" name="view">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>50</y>
+        <width>401</width>
+        <height>441</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(151, 0, 111);
+background-color: rgb(255, 255, 255);</string>
+      </property>
+      <column>
+       <property name="text">
+        <string>رقم المنتج</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>اسم المنتج</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>كمية المنتج</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>سعر المنتج</string>
+       </property>
+      </column>
+     </widget>
+     <widget class="QPushButton" name="showA">
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>510</y>
+        <width>401</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(151, 0, 111);
+color: rgb(255, 255, 255);
+font: 10pt &quot;Bernard MT Condensed&quot;;
+</string>
+      </property>
+      <property name="text">
+       <string>عرض الكل</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_3">
+     <attribute name="title">
+      <string>الفاتورة</string>
+     </attribute>
+     <widget class="QLineEdit" name="idItemtable">
+      <property name="geometry">
+       <rect>
+        <x>430</x>
+        <y>20</y>
+        <width>141</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(151, 0, 111);
+border-color: rgb(151, 0, 111);
+padding : 2px;</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="searchtable">
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>20</y>
+        <width>61</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(151, 0, 111);
+color: rgb(255, 255, 255);
+font: 10pt &quot;Bernard MT Condensed&quot;;
+</string>
+      </property>
+      <property name="text">
+       <string>بحث</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="enterIDtable">
+      <property name="geometry">
+       <rect>
+        <x>580</x>
+        <y>20</y>
+        <width>81</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(151, 0, 111);
+background-color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>ادخل رقم المنتج :</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QTableWidget" name="table">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>100</y>
+        <width>501</width>
+        <height>381</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(151, 0, 111);
+background-color: rgb(255, 255, 255);</string>
+      </property>
+      <column>
+       <property name="text">
+        <string>رقم المنتج</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>اسم المنتج</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>كمية المنتج</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>سعر المنتج</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>اجمالي السعر</string>
+       </property>
+      </column>
+     </widget>
+     <widget class="QLineEdit" name="total">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>420</x>
+        <y>490</y>
+        <width>161</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(151, 0, 111);
+border-color: rgb(151, 0, 111);
+padding : 2px;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="totalL">
+      <property name="geometry">
+       <rect>
+        <x>590</x>
+        <y>490</y>
+        <width>61</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(151, 0, 111);
+background-color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>الاجمالي :</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="count">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>490</y>
+        <width>171</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(151, 0, 111);
+border-color: rgb(151, 0, 111);
+padding : 2px;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="countL">
+      <property name="geometry">
+       <rect>
+        <x>330</x>
+        <y>490</y>
+        <width>71</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(151, 0, 111);
+background-color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>عدد الوحدات :</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="printInvoice">
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>530</y>
+        <width>521</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(151, 0, 111);
+color: rgb(255, 255, 255);
+font: 10pt &quot;Bernard MT Condensed&quot;;
+</string>
+      </property>
+      <property name="text">
+       <string>طباعة الفاتورة</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="qu">
+      <property name="geometry">
+       <rect>
+        <x>370</x>
+        <y>20</y>
+        <width>41</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(151, 0, 111);
+background-color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>الكمية :</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="quL">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>20</y>
+        <width>151</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(151, 0, 111);
+border-color: rgb(151, 0, 111);
+padding : 2px;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="dateTime">
+      <property name="geometry">
+       <rect>
+        <x>580</x>
+        <y>70</y>
+        <width>71</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(151, 0, 111);
+background-color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>التاريخ و الوقت :</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="dateTimeL">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>430</x>
+        <y>70</y>
+        <width>141</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(151, 0, 111);
+border-color: rgb(151, 0, 111);
+padding : 2px;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="User">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>70</y>
+        <width>91</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(151, 0, 111);
+background-color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>اسم المستخدم :</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="UserL">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>70</y>
+        <width>171</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(151, 0, 111);
+border-color: rgb(151, 0, 111);
+padding : 2px;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="boxEdit_2">
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>60</y>
+        <width>521</width>
+        <height>461</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(151, 0, 111);</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Box</enum>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <zorder>boxEdit_2</zorder>
+     <zorder>idItemtable</zorder>
+     <zorder>searchtable</zorder>
+     <zorder>enterIDtable</zorder>
+     <zorder>table</zorder>
+     <zorder>total</zorder>
+     <zorder>totalL</zorder>
+     <zorder>count</zorder>
+     <zorder>countL</zorder>
+     <zorder>printInvoice</zorder>
+     <zorder>qu</zorder>
+     <zorder>quL</zorder>
+     <zorder>dateTime</zorder>
+     <zorder>dateTimeL</zorder>
+     <zorder>User</zorder>
+     <zorder>UserL</zorder>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
